@@ -1,0 +1,1 @@
+document.write("mensaje desde el archivo del mas alla");

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		var cantidadSucursales = prompt("ingrese la cantidad de sucursales: ");
+	</script>
+</head>
+<body>
+	<table width="200" border="1">
+
+		<script type="text/javascript">
+			for (var i = 0; i < 13; i++) {
+				if(i==0){
+					document.write("<ht>Sucursal</th>")
+				}
+				document.write("<th>Mes: "+ parseInt(i+1) + "</th>");
+			}
+		</script>
+
+		<script type="text/javascript">
+			for (var i = 0; i < cantidadSucursales; i++) {
+				document.write("<tr>");
+				for (var j = 0; j < 13; j++) {
+					if(j==0){
+						document.write("<td>Sucursal "+ parseInt(i+1) + "</td>");
+					}else{
+						document.write("<td><input type='text' size='5'></td>");
+					}
+				}
+				document.write("</tr>");
+			}
+		</script>
+
+	</table>
+</body>
+</html>

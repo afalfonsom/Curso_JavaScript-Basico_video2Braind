@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+	var descuento = 0;
+
+	var cantidadProductos = prompt( "ingrese la cantidad de productos");
+	var precio =prompt("Precio total: ");
+	var pagoEnEfectivo = confirm ( " Ha Pagado en efectivo ?") /*confirm es parecido al promt solo que abre un  mensaje el cual la respuesta unicamente sera contestada como verdadera o falsa*/
+
+	if( cantidadProductos > 10 && precio < 500 ){
+		descuento = 10;
+	}
+	if(cantidadProductos > 10 precio < 500 ){
+		descuento =15;
+	}
+	if( precio < 10 && !pagoEnEfectivo ){
+		descuento = 2;
+	}
+
+	// 500 productos o 1000 en precio -> es mayorista
+	if ((cantidadProductos > 500 || precio >= 1000) && (pagoEnEfectivo)){
+		descuento *= 1.20;
+	}
+
+	/*operadores logicos complejos
+	 
+	 AND => && 
+	 OR => ||
+	 NOT => !
+	 XOR => xor
+
+	*/
+	</script>
+</body>
+</html>

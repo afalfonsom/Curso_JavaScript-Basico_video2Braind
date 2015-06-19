@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css">
+		div{
+			width: 400px; 
+			height: 400px;
+			float:left ;
+			margin: 15px;
+			background-color: yellow;
+			border: 1px solid #339;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function divClick(caja){
+			alert("Has Presionado la "+ caja.id);
+
+		}
+	</script>
+</head>
+<body>
+	<div id="caja1" onclick="divClick(this)" ></div>
+
+	<div id="caja2" onclick="divClick(this)"></div>
+
+	<div id="caja3" onclick="divClick(this)"></div>
+
+	<div id="caja4" onclick="divClick(this)"></div>
+</body>
+</html>

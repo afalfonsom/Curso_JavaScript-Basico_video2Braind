@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		var fecha = new Date();
+		var dia = fecha.getDate();
+		var mes = fecha.getMonth();
+		var anio = fecha.getFullYear();
+		var diaSemana =fecha.getDay();
+
+	//condicional multiple
+	var nombreMes;
+	switch(mes){
+		case 1:
+		nombreMes = "Enero";
+		break;
+		case 2:
+		nombreMes = "Febrero";
+		break;
+		case 3:
+		nombreMes = "Marzo";
+		break;
+		default:
+		nombreMes = "Desconocido"
+		break;
+	}
+
+	//llenar los meses con un array 
+	var meses = [ "Enero", "Febrero" ,"Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto"
+	,"Septiembre", "Octubre", "Noviembre", "Diciembre"];
+	//llenar Dia semana con array 
+	
+	var diasSemana= ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves","Viernes", "Sabado"];
+	
+	document.write("Hoy es: " + diasSemana[diaSemana] + ","+ dia+ "de " + meses[mes-1] + "de " + anio);
+</script>
+</body>
+</html>

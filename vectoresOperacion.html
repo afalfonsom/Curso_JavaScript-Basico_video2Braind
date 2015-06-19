@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		var precios = new Array();
+		do{
+			var precio = prompt("Ingrese el precio: ");
+			if(precio !="" && precio != undefined){
+				precios.push(precio);
+			}
+		}while(precio !="" && precio != undefined);
+		var cantidad = precios.length;
+		document.write("<h1>Hay " + cantidad + " precios cargados </h1>");
+		//procesar ese vectores
+		for (var i = 0; i < cantidad; i++) {
+			suma= suma+ parseInt(precios[i]);
+		}
+		if(cantidad > 0){
+			var promedio = suma/cantidad;
+		}else{
+			var promedio = 0;
+		}
+	</script>
+	<!-- aqui podemos ver como combinar codigo html y javascript-->
+	<p>Suma total: <b><script type="text/javascript">document.write(suma);</script></b></p>
+	<p>Promedio: <b><script type="text/javascript">document.write(promedio);</script></b></p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css">
+
+		input{
+			border: 1px solid gray;
+			background-color:#CCC;
+			height:20px;
+		}
+		input.enfoco{
+			background-color:#CF6;
+			border: 1px solid green;
+		}
+		.caja {
+			border: 1px solid gray;
+			padding: 10px;
+		}
+
+	</style>
+	<script type="text/javascript">
+		function focusIn(input){
+			input.className='enfoco';
+		}
+		function blurOut(input){
+			input.className='';
+		}
+	</script>
+</head>
+
+<body onload="document.getElementById('contenedor').className='caja'">
+	<div id="contenedor">
+		<label>
+			Nombre : <input type="text" id="txtNombre" onfocus="focusIn(this)" onblur="blurOut(this)">
+		</label>
+
+		<label>
+			Apellido : <input type="text" id="txtApellido" onfocus="focusIn(this)" onblur="blurOut(this)">
+		</label>
+	</div>
+</body>
+
+</html>

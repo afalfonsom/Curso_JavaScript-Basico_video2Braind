@@ -9,6 +9,13 @@
 		function inicializar(){
 			var link = document.getElementById("linkV2B");
 			var caja = document.getElementById("cajaContenido");
+
+			link.href = "http://www.video2braind.com";
+		}
+
+		function cambiarLink(){
+			// lo que hice aqui es con el .href = "http://www.google.com" fue cambiar el hrf al que estaba apuntando que en su caso era video2brain a google
+			document.getElementById("linkV2B").href = "http://www.google.com";
 		}
 	</script>
 </head>
@@ -16,6 +23,8 @@
 	<div id="cajaContenido">
 
 		<a id="linkV2B"> Link a la web</a>
+		<input type="button" onclick="cambiarLink()" value="Cambiar Redirección">
+
 	</div>
 </body>
 </html>

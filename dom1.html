@@ -11,16 +11,24 @@
 			var caja = document.getElementById("cajaContenido");
 
 			link.href = "http://www.video2braind.com";
+
+			/* esta linea de codigo muestra un ejemplo de como acceder a las propiedades de css 
+			desde javascript*/
+
+			caja.style.backgroundColor = "yellow";
+			caja.style.height ="100px";
+			caja.style.border = "1px solid black";
 		}
 
 		function cambiarLink(){
 			// lo que hice aqui es con el .href = "http://www.google.com" fue cambiar el hrf al que estaba apuntando que en su caso era video2brain a google
 			document.getElementById("linkV2B").href = "http://www.google.com";
+
 		}
 	</script>
 </head>
 <body onload="inicializar()">
-	<div id="cajaContenido">
+	<div id="cajaContenido" onmouseover="this.style.backgroundColor='white'" onmouseout="this.style.backgroundColor='yellow'">
 
 		<a id="linkV2B"> Link a la web</a>
 		<input type="button" onclick="cambiarLink()" value="Cambiar Redirección">

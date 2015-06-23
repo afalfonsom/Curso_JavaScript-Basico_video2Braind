@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function apagar(){
+			var contenedor = document.getElementById("contenedor");
+			//contenedor.style.visibility = "hidden"; //lo hace invisible pero deja el espacio del componente
+			contenedor.style.display = "none"; // lo hace invisible y desaparece el componente
+		}
+
+		function prender(){
+			var contenedor = document.getElementById("contenedor");
+			//contenedor.style.visibility = "visible"; // lo hace visible 
+			contenedor.style.display = "block";// lo hace visible y "crea" el componente
+		}
+		function apagarPrender(){
+			var contenedor = document.getElementById("contenedor");
+			var boton = document.getElementById("boton")
+			var checkbox = document.getElementById("checkboxPrender")
+			if(contenedor.style.display == "block" || contenedor.style.display == ""){
+				apagar();
+				boton.value = "Prender";
+				checkboxPrender.checked = "";
+			}else{
+				prender();
+				boton.value = "Apagar";
+				checkboxPrender.checked= "checked";
+			}
+		}
+	</script>
+	<style type="text/css">
+		#contenedor{
+			width: 400px;
+			height: 400px;
+			background-color: yellow;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<input type="checkbox" id="checkboxPrender" onchange="apagarPrender()"checked="checked" /> Contenedor Visible <br>
+	<div id="contenedor" >
+		
+	</div>
+
+	<input type="button" id="boton" value="Apagar" onclick="apagarPrender()"/>
+	<input type="button"  value="Apagar" onclick="apagar()"/>
+	<input type="button"  value="Encender" onclick="prender()"/>
+</body>
+</html>

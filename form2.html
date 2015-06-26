@@ -58,7 +58,7 @@
 			<label for="edad">Edad: </label><input type="text" required onfocus="entroEnfoco(this)" onblur="salioDeFocus(this); revisarNumerico(this)"><span></span>
 		</div>
 		<div class="form-group">
-			<label for="email">E-mail</label><input type="email" required onfocus="entroEnfoco(this)" onblur="salioDeFocus(this)"><span></span>
+			<label for="email">E-mail</label><input type="email" required onfocus="entroEnfoco(this)" onblur="salioDeFocus(this); revisarObligatorio(this); revisarEmail(this)" ><span></span>
 		</div>
 		<div class="form-group">
 			<label for="estadoCivil">Estado Civil</label> <select id="combobox" name="estadoCivil" onfocus="entroEnfoco(this)" onblur="salioDeFocus(this)">

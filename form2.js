@@ -21,3 +21,13 @@ function revisarNumerico(elemento){
 		}
 	}
 }
+function revisarLogintud(elemento, minimoDeseado){
+	if(elemento.value!=""){
+		var dato = elemento.value;
+		if(dato.length < minimoDeseado){
+			elemento.className='error';
+		}else{
+			elemento.className='';
+		}
+	}
+}

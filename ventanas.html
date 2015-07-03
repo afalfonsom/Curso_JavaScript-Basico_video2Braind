@@ -6,12 +6,20 @@
 	<title></title>
 	<link rel="stylesheet" href="">
 	<script type="text/javascript">
+		var popup;
 		function abrir(){
-			window.open("popup.html","ventana","width=300, height=400, resizable=no, toolbar=yes, menubar=yes,statusbar=yes,scrollbars=yes");
+			popup= window.open("popup.html","_blank","width=300, height=400, resizable=no, toolbar=yes, menubar=yes,statusbar=yes,scrollbars=yes");
+		}
+
+		function recibirMensaje(mensaje){
+			document.getElementById("mensaje").innerHTML = mensaje;
 		}
 	</script>
 </head>
 <body>
 	<input type="button" value="Abrir Ventana" onclick="abrir()">
+	<p><a href="javascript: window.close()">Cerrar</a></p>
+	<input type="button"  value="Comunicacion con la ventana" onclick="popup.recibirMensaje('hola desde tu dueño')">
+	<p id="mensaje"></p>
 </body>
 </html>
